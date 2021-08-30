@@ -4,6 +4,9 @@ var checkOut = Number ;
 
 btnGenera.addEventListener("click",
     function() {
+        //cambio colore al bordo del bottone
+        btnGenera.classList.add("btn_orange_border");
+
         //raccolgo l'input di "userName"
         var userName = document.getElementById("user_name").value;
         
@@ -42,15 +45,22 @@ btnGenera.addEventListener("click",
         
         document.getElementById("your_check_out"). innerHTML = checkOut + "€";
 
+        document.getElementById("ticket_heading").classList.add("visible");
         document.getElementById("your_ticket").classList.add("visible");
     }
 );
 
 btnAnnulla.addEventListener("click",
     function() {
+        // cambio colore al bordo del bottone
+        btnGenera.classList.remove("btn_orange_border");
+
+        //resetto i campi input
         var userName = document.getElementById("user_name").value = "";
         var distance = document.getElementById("distance").value = "";
         var discount = document.getElementById("promo").value = "";
+        
+        document.getElementById("ticket_heading").classList.remove("visible");
         document.getElementById("your_ticket").classList.remove("visible");
     }
 );

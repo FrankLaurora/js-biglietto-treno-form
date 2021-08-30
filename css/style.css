@@ -8,11 +8,22 @@
 /* common */
 body {
     background-color: #b91450;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
     text-transform: uppercase;
     color: #fff;
+    margin: 20px;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+label {
+    color: #b91450;
+    margin-bottom: 20px;
 }
 
 .container {
@@ -22,12 +33,78 @@ h2 {
     text-align: center;
 }
 
-.ms_form, .your_ticket {
+.form_box, .your_ticket {
     background-color: #fff;
     margin: 40px auto;
 }
 
-.your_ticket {
+/* form section */
+.form_box {
+    border-radius: 15px;
+    box-shadow: 0 0 20px;
+    padding: 20px 0;
+}
+
+.ms_form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+#user_name, #distance, #promo {
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #b91450;
+}
+
+.actions button {
+    margin: 0 5px;
+    padding: 5px;
+    color: #b91450;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #808080;
+    background-color: #cccccc;
+}
+
+.btn_orange_border {
+    border: 2px solid #f2a15a !important;
+}
+
+/* ticket section */
+.your_ticket{
+    text-align: left;
+    padding: 20px;
+}
+
+.ticket_box {
+    display: flex;
+    justify-content: center;
+}
+
+#recap {
+    flex-grow: 1;
+    border-top: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+}
+
+.name_box {
+    background-color: #808080;
+    padding: 15px;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.hidden {
     opacity: 0;
     transition: opacity 0.5s;
 }

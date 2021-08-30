@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Prenota Biglietto</title>
     </head>
@@ -11,44 +15,64 @@
         <div class="container">
             <h2>Calcola il prezzo del tuo Biglietto</h2>
 
-            <div class="ms_form">
-                <label for="user_name">Nome e Cognome</label>
-                <input type="text" name="user_name" id="user_name" placeholder="Inserisci nome e cognome">
-
-                <label for="distance">Km da percorrere</label>
-                <input type="number" name="distance" id="distance" placeholder="Seleziona la distanza">
-
-                <label for="promo">Fascia d'età</label>
-                <select name="promo" id="promo">
-                    <option value="maggiorenne">Maggiorenne</option>
-                    <option value="minorenne">Minorenne</option>
-                    <option value="over">Over 65</option>
-                </select>
+            <!-- gathering user's information -->
+            <section class="form_box">
+                <div class="ms_form">
+                    <div class="input_box">
+                        <label for="user_name">Nome e Cognome</label>
+                        <input type="text" name="user_name" id="user_name" placeholder="Inserisci nome e cognome">
+                    </div>
+    
+                    <div class="input_box">
+                        <label for="distance">Km da percorrere</label>
+                        <input type="number" name="distance" id="distance" placeholder="Seleziona la distanza">
+                    </div>
+    
+                    <div class="input_box">
+                        <label for="promo">Fascia d'età</label>
+                        <select name="promo" id="promo">
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="minorenne">Minorenne</option>
+                            <option value="over">Over 65</option>
+                        </select>    
+                    </div>    
+                </div>
+                
                 <div class="actions">
                     <button id="get_ticket">Genera</button>
                     <button id="erase">Annulla</button>
                 </div>
-            </div>
+            </section>
+            <!-- /gathering user's information -->
 
-
-            <div class="your_ticket" id="your_ticket">
+            <!-- informazioni biglietto -->
+            <h2 class="hidden" id="ticket_heading">il tuo biglietto</h2>
+            <div class="your_ticket hidden" id="your_ticket">
                 <h3>Dettagli passeggeri</h3>
-                <div id="your_name"></div>
-                <table>
-                    <tr>
-                        <th>Offerta</th>
-                        <th>Carrozza</th>
-                        <th>Codice CP</th>
-                        <th>Costo biglietto</th>
-                    </tr>
-                    <tr>
-                        <td>Biglietto <span id="your_promo"></span></td>
-                        <td id="your_seat"></td>
-                        <td id="your_CP"></td>
-                        <td id="your_check_out"></td>
-                    </tr>
-                </table>
+                <div class="ticket_box">
+                    <div class="name_box">
+                        <h3>Nome passegero</h3>
+                        <h4 id="your_name"></h4>
+                    </div>
+
+                    <table id="recap">
+                        <tr>
+                            <th>Offerta</th>
+                            <th>Carrozza</th>
+                            <th>Codice CP</th>
+                            <th>Costo biglietto</th>
+                        </tr>
+                        <tr>
+                            <td>Biglietto <span id="your_promo"></span></td>
+                            <td id="your_seat"></td>
+                            <td id="your_CP"></td>
+                            <td id="your_check_out"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
+            <!-- /informazioni biglietto -->
+
         </div>
 
         
