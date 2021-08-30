@@ -11,12 +11,12 @@
         <div class="container">
             <h2>Calcola il prezzo del tuo Biglietto</h2>
 
-            <form action="">
-                <label for="userName">Nome e Cognome</label>
-                <input type="text" value="userName" id="userName" placeholder="Inserisci nome e cognome">
+            <div class="msForm">
+                <label for="user_Name">Nome e Cognome</label>
+                <input type="text" name="user_Name" id="user_Name" placeholder="Inserisci nome e cognome">
 
                 <label for="distance">Km da percorrere</label>
-                <input type="number" value="distance" id="distance" placeholder="Seleziona la distanza">
+                <input type="number" name="distance" id="distance" placeholder="Seleziona la distanza">
 
                 <label for="promo">Fascia d'età</label>
                 <select name="promo" id="promo">
@@ -24,7 +24,11 @@
                     <option value="minorenne">Minorenne</option>
                     <option value="over">Over 65</option>
                 </select>
-            </form>
+                <button id="get_Ticket">Genera</button>
+            </div>
+            <div class="your_Ticket">
+                <div id="your_Name"></div>
+            </div>
         </div>
 
         
