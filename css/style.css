@@ -16,7 +16,22 @@ h2 {
 }
 
 .container {
+    width: 80%;
     max-width: 1200px;
     margin: auto;
     text-align: center;
+}
+
+.ms_form, .your_ticket {
+    background-color: #fff;
+    margin: 40px auto;
+}
+
+.your_ticket {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.visible {
+    opacity: 1;
 }
