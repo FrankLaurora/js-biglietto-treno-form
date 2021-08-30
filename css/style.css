@@ -1,0 +1,22 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* common */
+body {
+    background-color: #b91450;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
