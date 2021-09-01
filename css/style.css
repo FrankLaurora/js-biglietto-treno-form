@@ -74,8 +74,8 @@ label {
     background-color: #cccccc;
 }
 
-.btn_orange_border {
-    border: 2px solid #f2a15a !important;
+.actions button.btn_orange_border {
+    border: 2px solid #f2a15a;
 }
 
 /* ticket section */
